@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>그림의 떡 가격 예측</title>
+
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    
+        <style>
+            table {
+                width: 100%;
+                border-top: 1px solid #444444;
+                border-collapse: collapse;
+                padding: 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="navbar navbar-dark bg-dark shadow-sm">
+            <div class="container">
+              <a href="/#" class="navbar-brand d-flex align-items-center">
+                <strong> 그림의 떡 </strong>
+              </a>
+            </div>
+        </div>
+
+        <section class="py-5 text-center container">
+            <div class="row py-lg-5">
+              <div class="col-lg-6 col-md-8 mx-auto">
+                <h1 class="fw-light">서울시 집값을 예측해봅시다 !</h1>
+                <br>
+              </div>
+              <div class="col-lg-15 col-md-8 mx-auto">
+                <h5> {{year}}년에 지어진 {{dong}}의 {{pyeong}}평 아파트 {{floor}}층의 예상 거래 금액은 {{price}}원 입니다.</h5><br><br>
+              </div>
+              <div class="col-lg-15 col-md-8 mx-auto">
+                <h6><strong>조회하신 아파트와 비슷한 조건의 아파트 최근 거래 내역입니다.</strong></h6>
+                <table class='data'>
+                    <center>
+                    {% for table in tables %}
+                        {{ table|safe }}
+                    {% endfor %}
+                    </center>
+                </table>
+              </div>
+            </div>
+        </section>
+    </body>
+</html>

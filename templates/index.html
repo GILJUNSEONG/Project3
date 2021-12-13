@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>그림의 떡</title>
+
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    </head>
+
+
+    <body>
+        <div class="navbar navbar-dark bg-dark shadow-sm">
+            <div class="container">
+              <a href="#" class="navbar-brand d-flex align-items-center">
+                <strong> 그림의 떡 </strong>
+              </a>
+            </div>
+        </div>
+        
+        <section class="py-5 text-center container">
+            <div class="row py-lg-5">
+              <div class="col-lg-6 col-md-8 mx-auto">
+                <h1 class="fw-light">서울시 집값을 예측해봅시다 !</h1>
+                <br>
+                <form action="./predict" method="POST">
+                    
+                    <p class="lead text-muted"> 구를 선택해 주세요 </p>
+                    <select name = '지역코드'>
+                        <option disable="disable"> 구를 선택해 주세요. </option>
+                        <option value = '11110'>종로구</option>
+                        <option value = '11140'>중구</option>
+                        <option value = '11170'>용산구</option>
+                        <option value = '11200'>성동구</option>
+                        <option value = '11215'>광진구</option>
+                        <option value = '11230'>동대문구</option>
+                        <option value = '11260'>중랑구</option>
+                        <option value = '11290'>성북구</option>
+                        <option value = '11305'>강북구</option>
+                        <option value = '11320'>도봉구</option>
+                        <option value = '11350'>노원구</option>
+                        <option value = '11380'>은평구</option>
+                        <option value = '11410'>서대문구</option>
+                        <option value = '11440'>마포구</option>
+                        <option value = '11470'>양천구</option>
+                        <option value = '11500'>강서구</option>
+                        <option value = '11530'>구로구</option>
+                        <option value = '11545'>금천구</option>
+                        <option value = '11560'>영등포구</option>
+                        <option value = '11590'>동작구</option>
+                        <option value = '11620'>관악구</option>
+                        <option value = '11650'>서초구</option>
+                        <option value = '11680'>강남구</option>
+                        <option value = '11710'>송파구</option>
+                        <option value = '11740'>강동구</option>
+                    </select>
+                    <br>
+                    <p class="lead text-muted"> 동을 입력해 주세요. </p>
+                    <input type="text" name="법정동" placeholder="길음동">
+                    <br>
+                    <p class="lead text-muted"> 얼마나 넓은 집에 살고싶으신가요? (평 수) </p>
+                    <input type="text" name="전용면적" placeholder="35">
+                    <br>
+                    <p class="lead text-muted"> 몇층에 살고싶으신가요? </p>
+                    <input type="text" name="층" placeholder="15">
+                    <br>
+                    <p class="lead text-muted"> 언제 지어진 집을 찾으시나요 ? </p>
+                    <input type="text" name="건축년도" placeholder="2014">
+                    <div>
+                        <br>
+                        <input type="submit" class="btn btn-primary btn-sm btn-block" value="예 측 하 기" />
+                    </div>
+                </form>
+                <br>
+              </div>
+            </div>
+        </section>
+
+    </body>
+</html>
