@@ -7,14 +7,13 @@ assignees: ''
 
 ---
 
-**작업내역을 적어주세요.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+### **작성자** : 성길준
 
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
+#### Job Description
+> 작업내용을 적어주세요
 
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
+#### 오늘 한 일
+> 오늘 한 일을 적어주세요
 
-**Additional context**
-Add any other context or screenshots about the feature request here.
+#### 내일 할 일
+> 내일 할 일을 적어주세요
